@@ -37,10 +37,8 @@
 
     /* █▓▒░ PANEL GLOW ON HOVER ░▒▓█ */
     --border-hover: 3px #CAE2ED; /* Size & Color */
-    --border-glow: 0 0 5px 5px rgba(255, 255, 255, 0.3); 
+    --border-glow: 0 0 5px 5px rgb(255, 255, 255); 
     /* ⮡ Glow Effect w/ Trans 255x3 = rgb White*/
-    --border-glow2: 0 0 5px 5px rgb(255, 255, 255); /* Message Popup */
-    /* ⮡ Same Colour as Glow but Less Trans */
 
     /* █▓▒░ COMMENTS: ADD NEW ░▒▓█ */
     --commbrd-add: 3px rgba(98, 159, 167, 0.2); /* Border w/ Trans */
@@ -153,8 +151,8 @@
 .card:hover {
     transform: translateY(-4px);
     transition: 0.5s;
-    box-shadow: var(--border-glow) !important;
-    box-shadow: inset var(--border-glow);
+    box-shadow: color-mix(in srgb, var(--border-glow), transparent 70%); !important;
+    box-shadow: inset color-mix(in srgb, var(--border-glow), transparent 70%);
     border: var(--border-hover);
     border-style: var(--border-pnl);
 }
@@ -291,7 +289,7 @@ a, a:visited, a:hover {
     border-style: var(--butt-style);
 }
 .modal-content.card.max-w-xs { 
-    background: color-mix(in srgb, var(--border-glow2), transparent 40%);
+    background: color-mix(in srgb, var(--border-glow), transparent 40%);
 }
 
 /* -------------- AVATARS -------------- */
@@ -311,7 +309,7 @@ a, a:visited, a:hover {
     scale: var(--fren-scale);
     transform: var(--fren-rot);
     transition: 0.5s;
-    box-shadow: var(--border-glow); 
+    box-shadow: color-mix(in srgb, var(--border-glow), transparent 70%); 
     border: var(--fren-brd-hov);
 }
 .profile-avatar {
