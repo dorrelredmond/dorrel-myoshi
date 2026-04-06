@@ -6,7 +6,6 @@
     --text-sm: 11px;
 
     --text-base: 14px; /* Default Text */
-    --text-weight: normal; /* Reg Font Weight */
     --font-reg: "Arial", san-serif; /* Reg Font Type */
     --text-color: #52827C; /* Reg Font Color */
 
@@ -115,7 +114,7 @@
 * {
     font-family: var(--font-reg);
     font-size: var(--text-base);
-    font-weight: var(--text-weight);
+    font-weight: normal;
     text-shadow: var(--text-shd);
     color: var(--text-color);
     background: none;
@@ -246,6 +245,10 @@
 .profile-boop-stats { 
     scale: var(--boop-size);
     filter: var(--boop-color) !important;
+}
+.profile-display-name,
+.profile-username {
+    font-size: 0px;
 }
 
 /* -------------- LINKS & BUTTONS -------------- */
