@@ -1,105 +1,193 @@
 /* -------------- DEFINE VARIABLES -------------- */
+/* Easily Edit Profile Colours and Designs Here */
 .profile-custom-css {
-    --text-sm: 11px;
-    --text-base: 14px;
-    --text-lg: 18px;
 
-    --background: #eff1f5;
-    --accent-color: #ea76cb;
-    --overlay: #8c8fa1;
-    --text: #4c4f69;
-    --subtext: #6c6f85;
-    --border: #8839ef;
-    --vs-link: #1e66f5;
-    
+    /* █▓▒░ FONT SIZE, STYLE & COLOR ░▒▓█ */
+    --text-sm: 11px;
+
+    --text-base: 14px; /* Default Text */
+    --font-reg: "Arial", san-serif; /* Reg Font Type */
+    --text-color: #4c4f69; /* Reg Font Color */
+
+    --text-lg: 18px; /* Headers Size */
+    --font-hdr: "Copperplate", Fantasy; /* Headers Font Type */
+    --text-hdr-clr: #5c5f77; /* Header Font Color */
+    --hdr-weight: bold; /* Header Weight */
+    --hdr-space: 3px; /* Letter Spacing, put 0px if Want None */
+    --hdr-tran: uppercase; /* Header Force Upper, Lower or none */
+
+    --text-shd: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Dark Glow on Text w/ Transparency */
+    /* ⮡ Offset X, Y, Size, RGBA(Color x,x,x Trans% x) */
+
+    /* █▓▒░ BACKGROUNDS ░▒▓█ */
+    --background: #eff1f5; /* Panel BG */
+    --bg-blur: blur(12px); /* Glass Effect Strength */
+
+    /* █▓▒░ PANELS ░▒▓█ */
+    --border: 3px #8839ef; /* Size & Color */
+    --border-pnl: solid; /* Style */
+    --border-radius: 20px; /* Border Roundness */
+
+    /* █▓▒░ INSIDE PANELS ░▒▓█ */
+    --border-div: 3px rgba(136, 57, 239, 0.2); /* Divider Color w/ Trans */
+    --border-des: dashed none none none; /* Design. Only Change FIRST */
+    --border-rad: 0px; /* 0px = straight. Can Make rounded like above */
+    --header-rad: 20px 20px 0px 0px; /* Shape or Header Box */
+
+    /* █▓▒░ PANEL GLOW ON HOVER ░▒▓█ */
+    --border-hover: 3px #ea76cb; /* Size & Color */
+    --border-glow: 0 0 5px 5px rgb(255, 255, 255); 
+    /* ⮡ Glow Effect w/ Trans 255x3 = rgb White*/
+
+    /* █▓▒░ COMMENTS: AVATAR ░▒▓█ */
+    --commava-size: 50px ; /* Comment Icon Size */
+    --commava-rad: 50%; /* Border Radius */
+    --commava-sides: 3px dotted rgba(136, 57, 239, 0.3); /* Icon Border Left / Right */
+    --commava-bott: 3px solid #8839ef; /* Icon Border Bottom */
+    --commava-top: none; /* Icon Border Top */
+
+    /* █▓▒░ BUTTONS & LINKS ░▒▓█ */
+    --butt-text: #1e66f5; /* Button Text Color */
+    --butt-hover: #04a5e5; /* Hover Color */
+    --butt-font: "Helvetica", Sans-serif; /* Font Style */
+    --butt-bg: #acb0be; /* Buttons & Mood BG */
+    --butt-bg-hov: #7c7f93; /* BG on Hover */
+    --butt-border: 3px rgba(136, 57, 239, 0.3); /* Border Size & Color w/ Trans */
+    --butt-brd-size: 10px; /* Border Roundness */
+    --butt-style: solid; /* Border Style */
+
+    /* █▓▒░ BOOPS TEXT AND ICON ░▒▓█ */
+    --boop-size: 0.7; /* Scale % */
+    --boop-color: invert(63%) sepia(90%) saturate(1103%) hue-rotate(281deg) brightness(99%) contrast(85%);
+    /* ⮡ CCS Filter to Cover Text & Emote w/ Flat Color */
+
+    /* █▓▒░ FRIENDS & MUTUALS ░▒▓█ */
+    --fren-size: 0%; /* Name Sizes 0% = Invisible */
+    --fren-gap: 5px; /* Gap Between Friends */
+    --fren-px: 60px; /* Icon Size */
+
+    --fren-scale: 110%; /* Increase Icon Size on Hover */
+    --fren-rot: rotate(10deg); /* Rotate Icon Degrees */
+
+    /* █▓▒░ YOUR AVATAR / ICON ░▒▓█ */
+    --ava-size: 100px; /* Your Icon Size */
+    --ava-rad: 50%; /* Icon Roundness, Can use px */
+    --ava-brd: 3px #8839ef; /* Border Size & Color */
+    --ava-style: solid dashed solid dashed; /* Border Style */
+
+    --ava-scale: 110%; /* Hover Scale */
+    --ava-brd-hov: 0 0 40px rgba(234, 118, 203, 0.3); /* Border Hover */
+    --ava-rot: rotate(20deg); /* Rotate Icon Degrees */
+
+    /* █▓▒░ SCHEDULE ░▒▓█ */
+    --sch-subtext: #5c5f77; /* Mon - Fri / Time Text */
+    --sch-text: 10px; /* ⮡ Text Size */
+
+    /* █▓▒░ BADGES ░▒▓█ */
+    --bad-size: 0.7; /* Change Size of Badges */
+    --bad-color: invert(63%) sepia(90%) saturate(1103%) hue-rotate(281deg) brightness(99%) contrast(85%);
+    /* ⮡ CCS Filter to Cover Badges/ Replace w/ Flat Color */
+}
+
+/* -------------------------- PROFILE BADGES -------------------------- */
+/* Follow Format for All Badges With to Change */
+/* [Title:"TITLE HERE: SUB TEXT HERE"] svg, */
+
+[title="New Friend!: Made your first friend"] svg,
+[title="Boop Magnet: Received 50 boops"] svg,
+[title="Social Butterfly: Made 10 friends"] svg,
+[title="First Boop!: Sent your first boop"] svg,
+[title="Interior Decorator: Customized your profile with custom CSS or HTML"] svg,
+[title="Face Reveal: Set your profile avatar"] svg,
+[title="Conversation Starter: Left your first profile comment"] svg,
+[title="Club Member: Joined your first group"] svg,
+[title="Joiner: Joined 5 groups"] svg,
+[title="Dear Diary: Published your first journal entry"] svg {
+    scale: var(--bad-size);
+    filter: var(--bad-color);
 }
 
 /* -------------- GLOBAL SETTINGS -------------- */
 * {
-    font-family: "Arial", san-serif;
+    font-family: var(--font-reg);
     font-size: var(--text-base);
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* GLOW EFFECT */
-    color: var(--text);
-    background: none; /* GALLERY AND GROUP PHOTO'S */
+    font-weight: normal;
+    text-shadow: var(--text-shd);
+    color: var(--text-color);
+    background: none;
     border: none;
 }
 
-/* -------------- GLASS PANELS -------------- */
+/* -------------- PANELS -------------- */
 .profile .panel,
-.profile .module,
+.profile .module
 .profile .box,
 .card,
 .contentBox,
-.mz-condensed-inline { /* PANEL BORDERS */
+.mz-condensed-inline {
     background: color-mix(in srgb, var(--background), transparent 90%);
-    border: 3px solid var(--border);
-    border-radius: 20px;
+    border: var(--border);
+    border-style: var(--border-pnl);
+    border-radius: var(--border-radius);
 }
-
-.card-body, 
+.card-body,
 .panel-body div {
     background: color-mix(in srgb, var(--background), transparent 90%);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 3px color-mix(in srgb, var(--border), transparent 50%);
-    border-style: dashed none none none;
+    backdrop-filter: var(--bg-blur);
+    -webkit-backdrop-filter: var(--bg-blur);
+    border: var(--border-div);
+    border-style: var(--border-des);
+    border-radius: var(--border-rad);
 }
-
-/* -------------- PANEL SPACING -------------- */
-/*profile-page .card,
-.profile-top-bar {
-    background: var(--background);
-    margin-bottom: 0;
-}
-
-.profile-top-bar {
-    margin-bottom: 12px;
-}
-
-.profile-page .profile-layout {
-    gap: 20px;
-}
-
-.profile-page .profile-left,
-.profile-page .profile-right {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}*/
-
-/* -------------- HOVER EFFECT & ANIMATION -------------- */
-.profile .panel:hover, .card:hover {
+.profile .panel:hover, 
+.card:hover {
     transform: translateY(-4px);
     transition: 0.5s;
-    box-shadow: 0 10px 20px color-mix(in srgb, var(--overlay), transparent 50%);
-    border-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    box-shadow: color-mix(in srgb, var(--border-glow), transparent 70%) !important;
+    box-shadow: inset color-mix(in srgb, var(--border-glow), transparent 70%);
+    border: var(--border-hover);
+    border-style: var(--border-pnl);
 }
 
 /* -------------- PANEL SPECIFIC -------------- */
+.add-comment,
+.profile-comment,
+.add-comment div {
+    background: color-mix(in srgb, var(--background), transparent 90%) !important;
+    border: var(--commbrd-add);
+    border-radius: var(--commrad-add);
+}
 .profile-groups,
 .profile-photos,
 .add-comment button,
-.social-link-item,
 .profile-url-box,
 .profile-mood {
-    background: color-mix(in srgb, var(--background), transparent 90%);
+    background: color-mix(in srgb, var(--butt-bg), transparent 70%);
     justify-content: center;
-    color: var(--text) !important;
-    border: 3px solid color-mix(in srgb, var(--border), transparent 50%);
+    color: var(--butt-text) !important;
+    border: var(--butt-border);
+    border-style: var(--butt-style);
+    border-radius: var(--butt-brd-size);
 }
-
+.profile-url-box code,
+.mood-text {
+    color: var(--butt-text);
+}
+.profile-page .blurbs,
+.profile-page .interests {
+    display: flex;
+    justify-content: center;
+}
 .friends-grid {
-    gap: 5px;
+    gap: var(--fren-gap);
 }
-
 .friend-item {
+    justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     display: grid;
 }
-
-.friend-name { /* HIDE FRIEND NAMES */
-    scale: 0%;
+.friend-name {
+    scale: var(--fren-size);
 }
 
 /* -------------- HEADERS & FOOTERS -------------- */
@@ -107,6 +195,7 @@
 .card-header,
 .sectionHeader,
 .profileSection h3,
+.profile-top-actions,
 .panel-heading,
 .contentBox .title,
 .module .title,
@@ -115,175 +204,140 @@
 .header {
     background: color-mix(in srgb, var(--background), transparent 90%);
     justify-content: center;
-    color: var(--text);
+    color: var(--text-hdr-clr) !important;
     padding: 10px 10px;
+    font-family: var(--font-hdr) !important;
+    font-weight: var(--hdr-weight) !important;
     font-size: var(--text-lg);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    letter-spacing: var(--hdr-space);
+    text-transform: var(--hdr-tran);
+    backdrop-filter: var(--bg-blur);
+    -webkit-backdrop-filter: var(--bg-blur);
     border: none;
-}
-
-/* -------------- SCHEDULE -------------- */
-/* STILL TRYING TO FIGURE OUT */
-
-/* -------------------------- PROFILE BADGES -------------------------- */
-/* CSS filter works on all current browsers */
-/* SVG's can be filtered to a specific color, use the following Codepen (https://codepen.io/sosuke/pen/Pjoqqp) to convert a hex code to a CSS filter */
-/* Credit: https://stackoverflow.com/a/53336754 */
-[title="New Friend!: Made your first friend"] svg,
-[title="Social Butterfly: Made 10 friends"] svg,
-[title="First Boop!: Sent your first boop"] svg,
-[title="Interior Decorator: Customized your profile with custom CSS or HTML"] svg,
-[title="Face Reveal: Set your profile avatar"] svg,
-[title="Conversation Starter: Left your first profile comment"] svg,
-[title="Club Member: Joined your first group"] svg,
-[title="Joiner: Joined 5 groups"] svg {
-   scale: 0.6;
-   filter: invert(63%) sepia(90%) saturate(1103%) hue-rotate(281deg) brightness(99%) contrast(85%);
-}
-
-/* -------------- BOOP EMOTE -------------- */
-.profile-boop-stats { /* SIZE AND COLOUR REPLACE TEXT & EMOTE */
-    scale: 0.7;
-    filter: invert(63%) sepia(90%) saturate(1103%) hue-rotate(281deg) brightness(99%) contrast(85%);
+    border-radius: var(--header-rad);
 }
 
 /* -------------- MISC TEXT & TITLES -------------- */
 .w-1, .p-0, /* COLLAB TIME */
-.py-0, .px-\[2px\], /* COLLAB DAYS */
+.py-0, .px-\[2px\] { /* COLLAB DAYS */
+    color: var(--sch-subtext) !important;
+    font-size: var(--sch-text);
+}
 .blurb-title,
-.interest-title,
+.interest-title {
+    color: var(--butt-text);
+    font-size: var(--text-lg);
+}
 .text-vs-text-medium, /* COLLAB STATUS */
 .stats-table td:first-child {
-    color: var(--text) !important;
+    color: var(--butt-text) !important;
+    font-size: var(--text-sm);
 }
-
 .text-\[10px\], /* PHOTO & GROUP TITLE */
 .text-\[9px\] { /* SUBTEXT */
-    justify-content: center;
-    color: var(--subtext) !important;
-    scale: 0.8;
-    overflow: hidden;
+    Padding-left: 10px;
+    color: var(--butt-text) !important;
+    font-size: var(--text-sm);
 }
-
-.modal-content.card.max-w-xs { /* Popup When Interacting w/ Profile */
-    background: color-mix(in srgb, var(--background), transparent 50%);
+.profile-boop-stats { 
+    scale: var(--boop-size);
+    filter: var(--boop-color) !important;
+}
+.profile-display-name,
+.profile-username {
+    font-size: 0px;
 }
 
 /* -------------- LINKS & BUTTONS -------------- */
-a, a:visited, a:hover {
-    color: var(--vs-link) !important;
+a {
+    color: var(--butt-text) !important;
+    font-family: var(--butt-font) !important;
     font-size: var(--text-sm) !important;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    text-decoration-color: var(--accent-color);
-}
+    text-decoration-color: var(--border-hover);
 
+}
+a, a:visited {
+    color: var(--butt-hover) !important;
+}
+a, a:visited, a:hover {
+    color: var(--text-color) !important;
+}
 .social-link-item,
 .action-btn.primary,
 .action-btn,
-.contact-link { /* BUTTON DETAILS FRIEND, MESSAGE, BOOP */
+.contact-link { 
     justify-content: center;
-    background: color-mix(in srgb, var(--background), transparent 50%) !important;
-    border: 3px solid color-mix(in srgb, var(--border), transparent 70%);
+    background: color-mix(in srgb, var(--butt-bg), transparent 70%) !important;
+    border: var(--butt-border);
+    border-style: var(--butt-style);
+    border-radius: var( --butt-brd-size);
 }
-
-.profile-contact-links { /* BOX BUTTONS SIT IN */
+.profile-contact-links {
     background: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .social-link-item:hover,
 .contact-link:hover {
-    background: color-mix(in srgb, var(--background), transparent 90%) !important;
-    box-shadow: 0 0 5px 5px color-mix(in srgb, var(--overlay), transparent 70%);
-    box-shadow: inset 0 0 5px 5px color-mix(in srgb, var(--overlay), transparent 70%);
-    border: 3px solid var(--accent-color);
+    background: color-mix(in srgb, var(--butt-bg-hov), transparent 70%) !important;
+    box-shadow: var(--border-glow);
+    box-shadow: inset var(--border-glow);
+    border: var(--butt-border);
+    border-style: var(--butt-style);
 }
-
-.modal-content.card.max-w-xs { /* Popup When Interacting w/ Profile */
-    background: color-mix(in srgb, var(--background), transparent 40%); /* SAME COLOR, LESS OPACITY FOR VISIBILITY */
+.modal-content.card.max-w-xs { 
+    background: color-mix(in srgb, var(--border-glow), transparent 40%);
 }
-
-/* -------------- COMMENT SECTION -------------- */
-.add-comment,
-.profile-comment {
-    background: color-mix(in srgb, var(--background), transparent 70%) !important;
-    margin: 16px 20px 16px 16px;
-}
-
-.profile-custom-css, .emote-editor-paragraph {
-    font-family: "Sora", sans-serif;
-}
-
-.add-comment [role="textbox"] {
-    border: 4px solid var(--overlay);
-}
-
-.add-comment div[aria-hidden="true"] > div,
-.emote-editor-paragraph {
-    font-size: var(--text) !important;
-    font-weight: 500 !important;
-}
-
-.add-comment div[aria-hidden="true"] > div {
-    padding: 4px;
-}
-
 
 /* -------------- AVATARS -------------- */
 .user-avatar.friend-avatar,
 .friend-avatar,
 .user-avatar {
-    scale: 100%
-    width: 60px !important;
-    height: 60px !important;
-    border-radius: 25%;
-    border: 3px solid var(--border);
+    width: var(--fren-px) !important;
+    height: var(--fren-px) !important;
+    border-radius: var(--border-radius);
+    border: var(--border);
+    border-style: solid;
     object-fit: cover;
-    box-shadow: 0 0 10px color-mix(in srgb, var(--overlay), transparent 50%);
     transition: 0.5s;
 }
-
-.comment-avatar {
-    scale: 100%
-    width: 50px !important;
-    height: 50px !important;
-    border-radius: 50% !important;
-    border-right: 3px dotted color-mix(in srgb, var(--border), transparent 70%) !important;
-    border-left: 3px dotted color-mix(in srgb, var(--border), transparent 70%) !important;
-    border-bottom: 3px solid var(--border) !important;
-    object-fit: cover;
-}
-
+.user-avatar.friend-avatar:hover,
 .comment-avatar:hover,
 .user-avatar:hover {
-    scale: 110%;
-    transform: rotate(10deg);
+    scale: var(--fren-scale);
+    transform: var(--fren-rot);
     transition: 0.5s;
-    box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.3); /* WHITE OUTER GLOW */
-    border: 3px solid var(--accent-color); /* BORDER HOVER COLOR */
+    box-shadow: color-mix(in srgb, var(--border-glow), transparent 70%); 
+    border: var(--border-hover);
+    border-style: solid;
 }
-
 .profile-avatar {
-    scale: 100%
-    width: 100px !important;
-    height: 100px !important;
-    border-radius: 50% !important;
-    border: 3px var(--border);
-    border-style: solid dashed solid dashed !important;
+    width: var(--ava-size) !important;
+    height: var(--ava-size) !important;
+    border-radius: var(--ava-rad) !important;
+    border: var(--ava-brd);
+    border-style: var(--ava-style) !important;
     transition: 0.7s;
 }
-
 .profile-avatar:hover {
-    scale: 110%;
-    box-shadow: 0 0 40px color-mix(in srgb, var(--accent-color), transparent 70%);
-    transform: rotate(20deg);
+    scale: var(--ava-scale);
+    box-shadow: var(--ava-brd-hov);
+    transform: var(--ava-rot);
 }
+.comment-avatar {
+    width: var(--commava-size) !important;
+    height: var(--commava-size) !important;
+    border-radius: var(--commava-rad) !important;
+    border-right: var(--commava-sides) !important;
+    border-left: var(--commava-sides) !important;
+    border-bottom: var(--commava-bott) !important;
+    border-top: var(--commava-top) !important;
+    object-fit: cover;
+}
+
 
 /* -------------- Cursor -------------- */
 .add-comment button,
