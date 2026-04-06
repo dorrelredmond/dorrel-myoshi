@@ -1,0 +1,295 @@
+/* -------------- DEFINE VARIABLES -------------- */
+.profile-custom-css {
+    --text-sml: 11px;
+    --text-base: 14px;
+    --text-header: 18px;
+
+    --primary-bg-color: #eff1f5;
+    --accent-color: #ea76cb;
+    --overlay: #8c8fa1;
+    --text: #4c4f69;
+    --subtext: #6c6f85;
+    --border: #8839ef;
+    --link: #1e66f5;
+    
+}
+
+/* -------------- GLOBAL SETTINGS -------------- */
+* {
+    font-family: "Arial", san-serif;
+    font-size: var(--text-base);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* GLOW EFFECT */
+    color: var(--text);
+    background: none; /* GALLERY AND GROUP PHOTO'S */
+    border: none;
+}
+
+/* -------------- GLASS PANELS -------------- */
+.profile .panel,
+.profile .module,
+.profile .box,
+.card,
+.contentBox,
+.mz-condensed-inline { /* PANEL BORDERS */
+    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%);
+    border: 3px solid var(--border);
+    border-radius: 20px;
+}
+
+.card-body, 
+.panel-body div {
+    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 3px color-mix(in srgb, var(--border), transparent 50%);
+    border-style: dashed none none none;
+}
+
+/* -------------- PANEL SPACING -------------- */
+profile-page .card,
+.profile-top-bar {
+    background: var(--primary-bg-color);
+    margin-bottom: 0;
+}
+
+.profile-top-bar {
+    margin-bottom: 12px;
+}
+
+.profile-page .profile-layout {
+    gap: 20px;
+}
+
+.profile-page .profile-left,
+.profile-page .profile-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* -------------- HOVER EFFECT & ANIMATION -------------- */
+.profile .panel:hover, .card:hover {
+    transform: translateY(-4px);
+    transition: 0.5s;
+    box-shadow: 0 10px 20px color-mix(in srgb, var(--overlay), transparent 50%);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+/* -------------- PANEL SPECIFIC -------------- */
+.profile-groups,
+.profile-photos,
+.add-comment button,
+.social-link-item,
+.profile-url-box,
+.profile-mood {
+    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%);
+    justify-content: center;
+    color: var(--text) !important;
+    border: 3px solid color-mix(in srgb, var(--border), transparent 50%);
+}
+
+.friends-grid {
+    gap: 5px;
+}
+
+.friend-item {
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+}
+
+.friend-name { /* HIDE FRIEND NAMES */
+    scale: 0%;
+}
+
+/* -------------- HEADERS & FOOTERS -------------- */
+.panel .panel-heading,
+.card-header,
+.sectionHeader,
+.profileSection h3,
+.panel-heading,
+.contentBox .title,
+.module .title,
+.mz-condensed-inline .mz-title,
+.section-links,
+.header {
+    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%);
+    justify-content: center;
+    color: var(--text);
+    padding: 10px 10px;
+    font-size: var(--text-header);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: none;
+}
+
+/* -------------- SCHEDULE -------------- */
+/* STILL TRYING TO FIGURE OUT */
+
+/* -------------------------- PROFILE BADGES -------------------------- */
+/* CSS filter works on all current browsers */
+/* SVG's can be filtered to a specific color, use the following Codepen (https://codepen.io/sosuke/pen/Pjoqqp) to convert a hex code to a CSS filter */
+/* Credit: https://stackoverflow.com/a/53336754 */
+[title="New Friend!: Made your first friend"] svg,
+[title="Social Butterfly: Made 10 friends"] svg,
+[title="First Boop!: Sent your first boop"] svg,
+[title="Interior Decorator: Customized your profile with custom CSS or HTML"] svg,
+[title="Face Reveal: Set your profile avatar"] svg,
+[title="Conversation Starter: Left your first profile comment"] svg,
+[title="Club Member: Joined your first group"] svg,
+[title="Joiner: Joined 5 groups"] svg {
+   scale: 0.6;
+   filter: invert(63%) sepia(90%) saturate(1103%) hue-rotate(281deg) brightness(99%) contrast(85%);
+}
+
+/* -------------- BOOP EMOTE -------------- */
+.profile-boop-stats { /* SIZE AND COLOUR REPLACE TEXT & EMOTE */
+    scale: 0.7;
+    filter: invert(63%) sepia(90%) saturate(1103%) hue-rotate(281deg) brightness(99%) contrast(85%);
+}
+
+/* -------------- MISC TEXT & TITLES -------------- */
+.w-1, .p-0, /* COLLAB TIME */
+.py-0, .px-\[2px\], /* COLLAB DAYS */
+.blurb-title,
+.interest-title,
+.text-vs-text-medium, /* COLLAB STATUS */
+.stats-table td:first-child {
+    color: var(--text) !important;
+}
+
+.text-\[10px\], /* PHOTO & GROUP TITLE */
+.text-\[9px\] { /* SUBTEXT */
+    justify-content: center;
+    color: var(--subtext) !important;
+    scale: 0.8;
+    overflow: hidden;
+}
+
+.modal-content.card.max-w-xs { /* Popup When Interacting w/ Profile */
+    background: color-mix(in srgb, var(--primary-bg-color), transparent 50%);
+}
+
+/* -------------- LINKS & BUTTONS -------------- */
+a, a:visited, a:hover {
+    color: var(--link) !important;
+    font-size: var(--text-sml) !important;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-color: var(--accent-color);
+}
+
+.social-link-item,
+.action-btn.primary,
+.action-btn,
+.contact-link { /* BUTTON DETAILS FRIEND, MESSAGE, BOOP */
+    justify-content: center;
+    background: color-mix(in srgb, var(--primary-bg-color), transparent 50%) !important;
+    border: 3px solid color-mix(in srgb, var(--border), transparent 70%);
+}
+
+.profile-contact-links { /* BOX BUTTONS SIT IN */
+    background: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-link-item:hover,
+.contact-link:hover {
+    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%) !important;
+    box-shadow: 0 0 5px 5px color-mix(in srgb, var(--overlay), transparent 70%);
+    box-shadow: inset 0 0 5px 5px color-mix(in srgb, var(--overlay), transparent 70%);
+    border: 3px solid var(--accent-color);
+}
+
+.modal-content.card.max-w-xs { /* Popup When Interacting w/ Profile */
+    background: color-mix(in srgb, var(--primary-bg-color), transparent 40%); /* SAME COLOR, LESS OPACITY FOR VISIBILITY */
+}
+
+/* -------------- COMMENT SECTION -------------- */
+.add-comment,
+.profile-comment {
+    background: color-mix(in srgb, var(--primary-bg-color), transparent 70%) !important;
+    margin: 16px 20px 16px 16px;
+}
+
+.profile-custom-css, .emote-editor-paragraph {
+    font-family: "Sora", sans-serif;
+}
+
+.add-comment [role="textbox"] {
+    border: 4px solid var(--overlay);
+}
+
+.add-comment div[aria-hidden="true"] > div,
+.emote-editor-paragraph {
+    font-size: var(--text) !important;
+    font-weight: 500 !important;
+}
+
+.add-comment div[aria-hidden="true"] > div {
+    padding: 4px;
+}
+
+
+/* -------------- AVATARS -------------- */
+.user-avatar.friend-avatar,
+.friend-avatar,
+.user-avatar {
+    scale: 100%
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 25%;
+    border: 3px solid var(--border);
+    object-fit: cover;
+    box-shadow: 0 0 10px color-mix(in srgb, var(--overlay), transparent 50%);
+    transition: 0.5s;
+}
+
+.comment-avatar {
+    scale: 100%
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    border-right: 3px dotted color-mix(in srgb, var(--border), transparent 70%) !important;
+    border-left: 3px dotted color-mix(in srgb, var(--border), transparent 70%) !important;
+    border-bottom: 3px solid var(--border) !important;
+    object-fit: cover;
+}
+
+.comment-avatar:hover,
+.user-avatar:hover {
+    scale: 110%;
+    transform: rotate(10deg);
+    transition: 0.5s;
+    box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.3); /* WHITE OUTER GLOW */
+    border: 3px solid var(--accent-color); /* BORDER HOVER COLOR */
+}
+
+.profile-avatar {
+    scale: 100%
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 50% !important;
+    border: 3px var(--border);
+    border-style: solid dashed solid dashed !important;
+    transition: 0.7s;
+}
+
+.profile-avatar:hover {
+    scale: 110%;
+    box-shadow: 0 0 40px color-mix(in srgb, var(--accent-color), transparent 70%);
+    transform: rotate(20deg);
+}
+
+/* -------------- Cursor -------------- */
+.add-comment button,
+.action-btn.primary,
+.profile-page.profile-custom-css,
+.profile-page.profile-custom-css *,
+.profile-page.profile-custom-css a {
+  cursor: url('https://cdn.cursors-4u.net/css-previews/super-kawaii-cute-cat-kaoani-46fb8552-css.webp') 0 0, auto !important;
+}
