@@ -101,7 +101,8 @@
 [title="Conversation Starter: Left your first profile comment"] svg,
 [title="Club Member: Joined your first group"] svg,
 [title="Joiner: Joined 5 groups"] svg,
-[title="Dear Diary: Published your first journal entry"] svg {
+[title="Dear Diary: Published your first journal entry"] svg,
+[title="Boop Magnet: Received 50 boops"] svg {
     scale: var(--bad-size);
     filter: var(--bad-color);
 }

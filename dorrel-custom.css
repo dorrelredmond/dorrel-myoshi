@@ -94,7 +94,6 @@
 /* [Title:"TITLE HERE: SUB TEXT HERE"] svg, */
 
 [title="New Friend!: Made your first friend"] svg,
-[title="Boop Magnet: Received 50 boops"] svg,
 [title="Social Butterfly: Made 10 friends"] svg,
 [title="First Boop!: Sent your first boop"] svg,
 [title="Interior Decorator: Customized your profile with custom CSS or HTML"] svg,
@@ -102,7 +101,8 @@
 [title="Conversation Starter: Left your first profile comment"] svg,
 [title="Club Member: Joined your first group"] svg,
 [title="Joiner: Joined 5 groups"] svg,
-[title="Dear Diary: Published your first journal entry"] svg {
+[title="Dear Diary: Published your first journal entry"] svg,
+[title="Boop Magnet: Received 50 boops"] svg {
     scale: var(--bad-size);
     filter: var(--bad-color);
 }
@@ -215,6 +215,33 @@
     -webkit-backdrop-filter: var(--bg-blur);
     border: none;
     border-radius: var(--header-rad);
+}
+
+span {
+    color: var(--text-hdr-clr) !important;
+    font-family: var(--font-hdr) !important;
+    font-weight: var(--hdr-weight) !important;
+    font-size: var(--text-lg);
+    letter-spacing: var(--hdr-space);
+    text-transform: var(--hdr-tran);
+}
+
+span[data-lexical-text="true"],
+span.text-\[11px\].font-semibold.text-vs-text-high,
+span.text-\[10px\].text-\[var\(--vs-text-low\)\].capitalize,
+span.text-\[10px\].text-vs-text-medium,
+span.social-link-platform {
+    background: none;
+    justify-content: left;
+    color: var(--text-color) !important;
+    padding: none;
+    font-family: var(--font-reg) !important;
+    font-weight: normal !important;
+    font-size: var(--text-base);
+    letter-spacing: 0;
+    text-transform: none;
+    backdrop-filter: none;
+    border: none;
 }
 
 /* -------------- MISC TEXT & TITLES -------------- */
