@@ -21,7 +21,7 @@
     /* ⮡ Offset X, Y, Size, RGBA(Color x,x,x Trans% x) */
 
     /* █▓▒░ BACKGROUNDS ░▒▓█ */
-    --background: rgba(196, 232, 237, 0.1); /* Panel BG */
+    --background: rgb(196, 232, 237); /* Panel BG */
     --bg-blur: blur(12px); /* Glass Effect Strength */
 
     /* █▓▒░ PANELS ░▒▓█ */
@@ -39,11 +39,10 @@
     --border-hover: 3px #CAE2ED; /* Size & Color */
     --border-glow: 0 0 5px 5px rgba(255, 255, 255, 0.3); 
     /* ⮡ Glow Effect w/ Trans 255x3 = rgb White*/
-    --border-glow2: 0 0 5px 5px rgba(255, 255, 255, 0.6); /* Message Popup */
+    --border-glow2: 0 0 5px 5px rgb(255, 255, 255); /* Message Popup */
     /* ⮡ Same Colour as Glow but Less Trans */
 
     /* █▓▒░ COMMENTS: ADD NEW ░▒▓█ */
-    --commbg-add: rgba(196, 232, 237, 0.3); /* Background w/ Trans */
     --commbrd-add: 3px rgba(98, 159, 167, 0.2); /* Border w/ Trans */
     --commrad-add: 10px; /* Border Roundness */
 
@@ -58,8 +57,8 @@
     --butt-text: #438ABA; /* Button Text Color */
     --butt-hover: #ddf4f7; /* Hover Color */
     --butt-font: "Helvetica", Sans-serif; /* Font STyle */
-    --butt-bg: rgba(98, 159, 167, 0.3); /* Buttons & Mood BG */
-    --butt-bg-hov: rgba(124, 202, 212, 0.3); /* BG on Hover */
+    --butt-bg: rgb(98, 159, 167); /* Buttons & Mood BG */
+    --butt-bg-hov: rgb(124, 202, 212); /* BG on Hover */
     --butt-border: 3px rgba(98, 159, 167, 0.2) /* Border Size & Color w/ Trans */
     --butt-brd-size: 10px; /* Border Roundness */
     --butt-style: dashed solid dashed solid; /* Border Style */
@@ -136,14 +135,14 @@
 .card,
 .contentBox,
 .mz-condensed-inline {
-    background: var(--background);
+    background: color-mix(in srgb, var(--background), transparent 90%);
     border: var(--border);
     border-style: var(--border-pnl);
     border-radius: var(--border-radius);
 }
 .card-body,
 .panel-body div {
-    background: var(--background); 
+    background: color-mix(in srgb, var(--background), transparent 90%);
     backdrop-filter: var(--bg-blur);
     -webkit-backdrop-filter: var(--bg-blur);
     border: var(--border-div);
@@ -164,7 +163,7 @@
 .add-comment,
 .profile-comment,
 .add-comment div {
-    background: var(--commbg-add) !important;
+    background: color-mix(in srgb, var(--background), transparent 90%); !important;
     border: var(--commbrd-add);
     border-radius: var(--commrad-add);
 }
@@ -173,7 +172,7 @@
 .add-comment button,
 .profile-url-box,
 .profile-mood {
-    background: var(--butt-bg);
+    background: color-mix(in srgb, var(--butt-bg), transparent 70%);
     justify-content: center;
     color: var(--butt-text) !important;
     border: var(--butt-border);
@@ -213,7 +212,7 @@
 .mz-condensed-inline .mz-title,
 .section-links,
 .header {
-    background: var(--background);
+    background: color-mix(in srgb, var(--background), transparent 90%);
     justify-content: center;
     color: var(--text-hdr-clr) !important;
     padding: 10px 10px;
@@ -272,7 +271,7 @@ a, a:visited, a:hover {
 .action-btn,
 .contact-link { 
     justify-content: center;
-    background: var(--butt-bg) !important;
+    background: color-mix(in srgb, var(--butt-bg), transparent 70%); !important;
     border: var(--butt-border);
     border-style: var(--butt-style);
     border-radius: var( --butt-brd-size);
@@ -285,14 +284,14 @@ a, a:visited, a:hover {
 }
 .social-link-item:hover,
 .contact-link:hover {
-    background: var(--butt-bg-hov) !important;
+    background: color-mix(in srgb, var(--butt-bg-hov), transparent 70%); !important;
     box-shadow: var(--border-glow);
     box-shadow: inset var(--border-glow);
     border: var(--butt-border);
     border-style: var(--butt-style);
 }
 .modal-content.card.max-w-xs { 
-    background: var(--border-glow2); 
+    background: color-mix(in srgb, var(--border-glow2), transparent 40%);
 }
 
 /* -------------- AVATARS -------------- */
