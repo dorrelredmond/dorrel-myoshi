@@ -294,7 +294,7 @@ a, a:visited, a:hover {
     width: var(--fren-px) !important;
     height: var(--fren-px) !important;
     border-radius: var(--border-radius);
-    border: var(--border));
+    border: var(--border);
     border-style: solid;
     object-fit: cover;
     transition: 0.5s;
