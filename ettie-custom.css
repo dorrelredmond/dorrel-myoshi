@@ -40,10 +40,6 @@
     --border-glow: 0 0 5px 5px rgb(255, 255, 255); 
     /* ⮡ Glow Effect w/ Trans 255x3 = rgb White*/
 
-    /* █▓▒░ COMMENTS: ADD NEW ░▒▓█ */
-    --commbrd-add: 3px rgba(98, 159, 167, 0.2); /* Border w/ Trans */
-    --commrad-add: 10px; /* Border Roundness */
-
     /* █▓▒░ COMMENTS: AVATAR ░▒▓█ */
     --commava-size: 50px ; /* Comment Icon Size */
     --commava-rad: 50%; /* Border Radius */
@@ -57,7 +53,7 @@
     --butt-font: "Helvetica", Sans-serif; /* Font STyle */
     --butt-bg: rgb(98, 159, 167); /* Buttons & Mood BG */
     --butt-bg-hov: rgb(124, 202, 212); /* BG on Hover */
-    --butt-border: 3px rgba(98, 159, 167, 0.2) /* Border Size & Color w/ Trans */
+    --butt-border: 3px rgba(98, 159, 167, 0.2); /* Border Size & Color w/ Trans */
     --butt-brd-size: 10px; /* Border Roundness */
     --butt-style: dashed solid dashed solid; /* Border Style */
 
@@ -151,7 +147,7 @@
 .card:hover {
     transform: translateY(-4px);
     transition: 0.5s;
-    box-shadow: color-mix(in srgb, var(--border-glow), transparent 70%); !important;
+    box-shadow: color-mix(in srgb, var(--border-glow), transparent 70%) !important;
     box-shadow: inset color-mix(in srgb, var(--border-glow), transparent 70%);
     border: var(--border-hover);
     border-style: var(--border-pnl);
@@ -161,7 +157,7 @@
 .add-comment,
 .profile-comment,
 .add-comment div {
-    background: color-mix(in srgb, var(--background), transparent 90%); !important;
+    background: color-mix(in srgb, var(--background), transparent 90%) !important;
     border: var(--commbrd-add);
     border-radius: var(--commrad-add);
 }
@@ -269,7 +265,7 @@ a, a:visited, a:hover {
 .action-btn,
 .contact-link { 
     justify-content: center;
-    background: color-mix(in srgb, var(--butt-bg), transparent 70%); !important;
+    background: color-mix(in srgb, var(--butt-bg), transparent 70%) !important;
     border: var(--butt-border);
     border-style: var(--butt-style);
     border-radius: var( --butt-brd-size);
@@ -282,7 +278,7 @@ a, a:visited, a:hover {
 }
 .social-link-item:hover,
 .contact-link:hover {
-    background: color-mix(in srgb, var(--butt-bg-hov), transparent 70%); !important;
+    background: color-mix(in srgb, var(--butt-bg-hov), transparent 70%) !important;
     box-shadow: var(--border-glow);
     box-shadow: inset var(--border-glow);
     border: var(--butt-border);
