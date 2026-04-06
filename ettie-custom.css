@@ -49,7 +49,7 @@
     /* █▓▒░ BUTTONS & LINKS ░▒▓█ */
     --butt-text: #438ABA; /* Button Text Color */
     --butt-hover: #ddf4f7; /* Hover Color */
-    --butt-font: "Helvetica", Sans-serif; /* Font STyle */
+    --butt-font: "Helvetica", Sans-serif; /* Font Style */
     --butt-bg: rgb(98, 159, 167); /* Buttons & Mood BG */
     --butt-bg-hov: rgb(124, 202, 212); /* BG on Hover */
     --butt-border: 3px rgba(98, 159, 167, 0.2); /* Border Size & Color w/ Trans */
@@ -65,10 +65,6 @@
     --fren-size: 0%; /* Name Sizes 0% = Invisible */
     --fren-gap: 5px; /* Gap Between Friends */
     --fren-px: 60px; /* Icon Size */
-
-    --fren-brd: 3px solid #629fa7; /* Border Size, Style & Color */
-    --fren-brd-size: 20px; /* Icon Border Roundness */
-    --fren-brd-hov: 3px solid #CAE2ED; /* Icon Border Hover */
 
     --fren-scale: 110%; /* Increase Icon Size on Hover */
     --fren-rot: rotate(10deg); /* Rotate Icon Degrees */
@@ -297,8 +293,9 @@ a, a:visited, a:hover {
 .user-avatar {
     width: var(--fren-px) !important;
     height: var(--fren-px) !important;
-    border-radius: var(--fren-brd-size);
-    border: var(--fren-brd);
+    border-radius: var(--border-radius);
+    border: var(--border));
+    border-style: solid;
     object-fit: cover;
     transition: 0.5s;
 }
@@ -309,7 +306,8 @@ a, a:visited, a:hover {
     transform: var(--fren-rot);
     transition: 0.5s;
     box-shadow: color-mix(in srgb, var(--border-glow), transparent 70%); 
-    border: var(--fren-brd-hov);
+    border: var(--border-hover);
+    border-style: solid;
 }
 .profile-avatar {
     width: var(--ava-size) !important;
