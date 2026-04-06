@@ -3,14 +3,14 @@
 .profile-custom-css {
 
     /* █▓▒░ FONT SIZE, STYLE & COLOR ░▒▓█ */
-    --text-sml: 11px;
+    --text-sm: 11px;
 
-    --text-reg: 14px; /* Default Text */
+    --text-base: 14px; /* Default Text */
     --text-weight: normal; /* Reg Font Weight */
     --font-reg: "Arial", san-serif; /* Reg Font Type */
     --text-color: #52827C; /* Reg Font Color */
 
-    --text-lrg: 18px; /* Headers Size */
+    --text-lg: 18px; /* Headers Size */
     --font-hdr: "Copperplate", Fantasy; /* Headers Font Type */
     --text-hdr-clr: #517B99; /* Header Font Color */
     --hdr-weight: bold; /* Header Weight */
@@ -121,7 +121,7 @@
 /* -------------- GLOBAL SETTINGS -------------- */
 * {
     font-family: var(--font-reg);
-    font-size: var(--text-reg);
+    font-size: var(--text-base);
     font-weight: var(--text-weight);
     text-shadow: var(--text-shd);
     color: var(--text-color);
@@ -219,7 +219,7 @@
     padding: 10px 10px;
     font-family: var(--font-hdr) !important;
     font-weight: var(--hdr-weight) !important;
-    font-size: var(--text-lrg);
+    font-size: var(--text-lg);
     letter-spacing: var(--hdr-space);
     text-transform: var(--hdr-tran);
     backdrop-filter: var(--bg-blur);
@@ -237,18 +237,18 @@
 .blurb-title,
 .interest-title {
     color: var(--butt-text);
-    font-size: var(--text-lrg);
+    font-size: var(--text-lg);
 }
 .text-vs-text-medium, /* COLLAB STATUS */
 .stats-table td:first-child {
     color: var(--butt-text) !important;
-    font-size: var(--text-sml);
+    font-size: var(--text-sm);
 }
 .text-\[10px\], /* PHOTO & GROUP TITLE */
 .text-\[9px\] { /* SUBTEXT */
     Padding-left: 10px;
     color: var(--butt-text) !important;
-    font-size: var(--text-sml);
+    font-size: var(--text-sm);
 }
 .profile-boop-stats { 
     scale: var(--boop-size);
@@ -259,7 +259,7 @@
 a {
     color: var(--butt-text) !important;
     font-family: var(--butt-font) !important;
-    font-size: var(--text-sml) !important;
+    font-size: var(--text-sm) !important;
 }
 a, a:visited {
     color: var(--butt-hover) !important;

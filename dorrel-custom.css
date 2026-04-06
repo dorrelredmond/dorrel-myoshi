@@ -1,16 +1,16 @@
 /* -------------- DEFINE VARIABLES -------------- */
 .profile-custom-css {
-    --text-sml: 11px;
+    --text-sm: 11px;
     --text-base: 14px;
-    --text-header: 18px;
+    --text-lg: 18px;
 
-    --primary-bg-color: #eff1f5;
+    --background: #eff1f5;
     --accent-color: #ea76cb;
     --overlay: #8c8fa1;
     --text: #4c4f69;
     --subtext: #6c6f85;
     --border: #8839ef;
-    --link: #1e66f5;
+    --vs-link: #1e66f5;
     
 }
 
@@ -32,14 +32,14 @@
 .card,
 .contentBox,
 .mz-condensed-inline { /* PANEL BORDERS */
-    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%);
+    background: color-mix(in srgb, var(--background), transparent 90%);
     border: 3px solid var(--border);
     border-radius: 20px;
 }
 
 .card-body, 
 .panel-body div {
-    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%);
+    background: color-mix(in srgb, var(--background), transparent 90%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 3px color-mix(in srgb, var(--border), transparent 50%);
@@ -49,7 +49,7 @@
 /* -------------- PANEL SPACING -------------- */
 profile-page .card,
 .profile-top-bar {
-    background: var(--primary-bg-color);
+    background: var(--background);
     margin-bottom: 0;
 }
 
@@ -83,7 +83,7 @@ profile-page .card,
 .social-link-item,
 .profile-url-box,
 .profile-mood {
-    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%);
+    background: color-mix(in srgb, var(--background), transparent 90%);
     justify-content: center;
     color: var(--text) !important;
     border: 3px solid color-mix(in srgb, var(--border), transparent 50%);
@@ -113,11 +113,11 @@ profile-page .card,
 .mz-condensed-inline .mz-title,
 .section-links,
 .header {
-    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%);
+    background: color-mix(in srgb, var(--background), transparent 90%);
     justify-content: center;
     color: var(--text);
     padding: 10px 10px;
-    font-size: var(--text-header);
+    font-size: var(--text-lg);
     letter-spacing: 1px;
     text-transform: uppercase;
     backdrop-filter: blur(12px);
@@ -169,13 +169,13 @@ profile-page .card,
 }
 
 .modal-content.card.max-w-xs { /* Popup When Interacting w/ Profile */
-    background: color-mix(in srgb, var(--primary-bg-color), transparent 50%);
+    background: color-mix(in srgb, var(--background), transparent 50%);
 }
 
 /* -------------- LINKS & BUTTONS -------------- */
 a, a:visited, a:hover {
-    color: var(--link) !important;
-    font-size: var(--text-sml) !important;
+    color: var(--vs-link) !important;
+    font-size: var(--text-sm) !important;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     text-decoration-color: var(--accent-color);
@@ -186,7 +186,7 @@ a, a:visited, a:hover {
 .action-btn,
 .contact-link { /* BUTTON DETAILS FRIEND, MESSAGE, BOOP */
     justify-content: center;
-    background: color-mix(in srgb, var(--primary-bg-color), transparent 50%) !important;
+    background: color-mix(in srgb, var(--background), transparent 50%) !important;
     border: 3px solid color-mix(in srgb, var(--border), transparent 70%);
 }
 
@@ -199,20 +199,20 @@ a, a:visited, a:hover {
 
 .social-link-item:hover,
 .contact-link:hover {
-    background: color-mix(in srgb, var(--primary-bg-color), transparent 90%) !important;
+    background: color-mix(in srgb, var(--background), transparent 90%) !important;
     box-shadow: 0 0 5px 5px color-mix(in srgb, var(--overlay), transparent 70%);
     box-shadow: inset 0 0 5px 5px color-mix(in srgb, var(--overlay), transparent 70%);
     border: 3px solid var(--accent-color);
 }
 
 .modal-content.card.max-w-xs { /* Popup When Interacting w/ Profile */
-    background: color-mix(in srgb, var(--primary-bg-color), transparent 40%); /* SAME COLOR, LESS OPACITY FOR VISIBILITY */
+    background: color-mix(in srgb, var(--background), transparent 40%); /* SAME COLOR, LESS OPACITY FOR VISIBILITY */
 }
 
 /* -------------- COMMENT SECTION -------------- */
 .add-comment,
 .profile-comment {
-    background: color-mix(in srgb, var(--primary-bg-color), transparent 70%) !important;
+    background: color-mix(in srgb, var(--background), transparent 70%) !important;
     margin: 16px 20px 16px 16px;
 }
 
