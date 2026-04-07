@@ -103,7 +103,7 @@
 [title="Joiner: Joined 5 groups"] svg,
 [title="Dear Diary: Published your first journal entry"] svg,
 [title="Boop Magnet: Received 50 boops"] svg,
-[title="Serial Booper: Send 50 boops"] svg {
+[title="Serial Booper: Sent 50 boops"] svg {
     scale: var(--bad-size);
     filter: var(--bad-color);
 }
@@ -216,6 +216,10 @@
     -webkit-backdrop-filter: var(--bg-blur);
     border: none;
     border-radius: var(--header-rad);
+}
+
+.section-links {
+    border-radius: 0;
 }
 
 span {
