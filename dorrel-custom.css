@@ -266,9 +266,6 @@ a {
     color: var(--butt-text) !important;
     font-family: var(--butt-font) !important;
     font-size: var(--text-sm) !important;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-decoration-color: var(--border-hover);
 
 }
 a, a:visited {
