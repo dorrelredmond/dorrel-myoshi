@@ -93,17 +93,7 @@
 /* Follow Format for All Badges With to Change */
 /* [Title:"TITLE HERE: SUB TEXT HERE"] svg, */
 
-[title="New Friend!: Made your first friend"] svg,
-[title="Social Butterfly: Made 10 friends"] svg,
-[title="First Boop!: Sent your first boop"] svg,
-[title="Interior Decorator: Customized your profile with custom CSS or HTML"] svg,
-[title="Face Reveal: Set your profile avatar"] svg,
-[title="Conversation Starter: Left your first profile comment"] svg,
-[title="Club Member: Joined your first group"] svg,
-[title="Joiner: Joined 5 groups"] svg,
-[title="Dear Diary: Published your first journal entry"] svg,
-[title="Boop Magnet: Received 50 boops"] svg,
-[title="Serial Booper: Sent 50 boops"] svg {
+.card-body svg {
     scale: var(--bad-size);
     filter: var(--bad-color);
 }
