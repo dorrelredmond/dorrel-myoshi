@@ -170,11 +170,12 @@
     justify-content: center;
 }
 .friends-grid {
-    gap: var(--fren-gap);
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    align-self: center;
+    gap: 5px;
 }
 .friend-item {
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
     display: grid;
 }
 .friend-name {
